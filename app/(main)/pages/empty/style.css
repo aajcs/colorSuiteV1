@@ -1,0 +1,45 @@
+/* En tu archivo CSS (styles.css) */
+
+.instagram-feed {
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.instagram-post {
+    width: calc(33.33% - 10px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.instagram-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.instagram-caption {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.2s;
+}
+
+.instagram-post:hover {
+    transform: scale(1.05);
+}
+
+.instagram-post:hover .instagram-caption {
+    transform: translateY(0);
+}

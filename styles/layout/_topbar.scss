@@ -1,12 +1,14 @@
 .layout-topbar {
     position: fixed;
-    height: 5rem;
+    height: 15rem;
     z-index: 997;
     left: 0;
     top: 0;
     width: 100%;
     padding: 0 2rem;
-    background-color: var(--surface-card);
+    padding-left: 0;
+    // background-color: var(--surface-card);
+    background-color: #666666;
     transition: left $transitionDuration;
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@
         border-radius: 12px;
 
         img {
-            height: 2.5rem;
+            height: 15rem;
             margin-right: .5rem;
         }
 
@@ -32,14 +34,11 @@
     }
 
     .layout-topbar-button {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+       
         position: relative;
-        color: var(--text-color-secondary);
-        border-radius: 50%;
-        width: 3rem;
-        height: 3rem;
+       color: var(--primary-color-text); 
+      
+       margin: 0.2rem;
         cursor: pointer;
         transition: background-color $transitionDuration;
 
@@ -52,13 +51,21 @@
             @include focused();
         }
 
-        i {
-            font-size: 1.5rem;
+        i {  display: inline-flex;
+        // justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+            font-size: 1.5rem; background-color: #fe81af;
+           
         }
 
         span {
             font-size: 1rem;
-            display: none;
+            margin-left: 1rem;
+            // display: none;
         }
     }
 
@@ -79,9 +86,10 @@
         padding: 0;
         list-style: none;
         display: flex;
+        flex-direction: column;
 
         .layout-topbar-button {
-            margin-left: 1rem;
+            margin-left: -10rem;
         }
     }
 }

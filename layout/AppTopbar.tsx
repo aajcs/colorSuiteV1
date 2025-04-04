@@ -21,8 +21,8 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
     return (
         <div className="layout-topbar">
             <Link href="/" className="layout-topbar-logo">
-                <img src={`/layout/images/logo-${layoutConfig.colorScheme !== 'light' ? 'white' : 'dark'}.svg`} width="47.22px" height={'35px'} alt="logo" />
-                <span>SAKAI</span>
+                <img src={'/layout/images/colorSuiteLogo.png'} alt="logo" />
+                {/* <span>SAKAI</span> */}
             </Link>
 
             <button ref={menubuttonRef} type="button" className="p-link layout-menu-button layout-topbar-button" onClick={onMenuToggle}>
@@ -34,20 +34,30 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
             </button>
 
             <div ref={topbarmenuRef} className={classNames('layout-topbar-menu', { 'layout-topbar-menu-mobile-active': layoutState.profileSidebarVisible })}>
-                <button type="button" className="p-link layout-topbar-button">
-                    <i className="pi pi-calendar"></i>
-                    <span>Calendar</span>
-                </button>
-                <button type="button" className="p-link layout-topbar-button">
-                    <i className="pi pi-user"></i>
-                    <span>Profile</span>
-                </button>
-                <Link href="/documentation">
+                <Link href="https://wa.me/message/GH2FRHTQRJ6ZF1" target="_blank">
+                    <button type="button" className="p-link layout-topbar-button">
+                        <i className="pi pi-whatsapp"></i>
+                        <span>+58 412-5607423</span>
+                    </button>
+                </Link>
+                <Link href="https://www.facebook.com/profile.php?id=100086978452259" target="_blank">
+                    <button type="button" className="p-link layout-topbar-button">
+                        <i className="pi pi-facebook"></i>
+                        <span>@Colorsuiteshop</span>
+                    </button>
+                </Link>
+                <Link href="https://instagram.com/colorsuiteshop?igshid=MzRlODBiNWFlZA==" target="_blank">
+                    <button type="button" className="p-link layout-topbar-button">
+                        <i className="pi pi-instagram"></i>
+                        <span>@Colorsuiteshop</span>
+                    </button>
+                </Link>
+                {/* <Link href="/documentation">
                     <button type="button" className="p-link layout-topbar-button">
                         <i className="pi pi-cog"></i>
                         <span>Settings</span>
                     </button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
